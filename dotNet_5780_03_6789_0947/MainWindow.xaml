@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:dotNet_5780_03_6789_0947"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="מאגר הצימרים הגדול" Height="450" Width="800">
+
+    <Grid Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="200*"/>
+            <RowDefinition Height="200*"/>
+            <RowDefinition Height="200*"/>
+
+        </Grid.RowDefinitions>
+        <Grid Name="UpGrid" HorizontalAlignment="Stretch" Height="auto" Grid.Row="0" VerticalAlignment="Stretch" Width="auto" Margin="2,0,-2.4,0.4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions >
+            <ComboBox Name="cbHostList" HorizontalAlignment= "Stretch" VerticalAlignment="Stretch" Grid.Column="0" FontFamily="Stencil" FontSize="14" FontWeight="Bold" Background="#FFB76666" />
+            <TextBox Name="tbHostName" HorizontalAlignment= "Stretch" VerticalAlignment="Stretch" Grid.Column="1" Text="{Binding Path=HostName}" Background="#FFF62B09"  />
+        </Grid>
+
     </Grid>
+
 </Window>

@@ -5,8 +5,19 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:dotNet_5780_03_6789_0947"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+            d:DesignHeight="200" d:DesignWidth="800" BorderThickness="1" FontFamily="Arial" FontSize="20">
+    <Grid Name="UserControlGrid" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions >
+        <TextBox Name="tbUnitName" Text="{Binding Path=UnitName}" BorderBrush="Beige" Grid.Column="0" Margin="52,10,61.6,148" Background="Gray" />
+        <TextBox Name="nbchambre" Text="{Binding Path=Rooms}" Margin="52,87,275.6,60" Background="Gray"/>
+        <Label   Content="nb de chambre" Margin="130,98,9.6,61"  RenderTransformOrigin="1.348,0.392" Background="Gray"/>
+        <CheckBox Name ="IsSwimigPool" Content="piscine" IsChecked="{Binding Path=IsSwimingPool}" Background="Gray" Margin="52,161,61.4,0" RenderTransformOrigin="0.485,0.383" FontFamily="Arial Nova Light" />
+        <Viewbox Name="vbCalendar" Grid.Column="1" Stretch="Fill" Margin="9.6,0,9.8,28"  />
+        <Button Name ="btOrder" Content="reserver" Margin="86.6,175,76.8,0" Click="BtOrder_Click" Grid.Column="1" Background="Gray"/>
+
     </Grid>
 </UserControl>

@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace ClassLibrary1
+namespace dotNet_5780_03_6789_0947
 {
     public class Host
     {
+        public string HostName { get; set; }
+        public List<HostingUnit> Units { get; set; }
     }
 }
